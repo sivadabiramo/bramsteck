@@ -12,8 +12,14 @@
 								</div>
                             <div class="block-content collapse in">
                                 <div class="span12">
-                                    <H2>SAMPLE DATA</H2>
-										Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
+
+										<?php
+											$mission_query = mysql_query("select * from content where title  = 'History' ")or die(mysql_error());
+											$mission_row = mysql_fetch_array($mission_query);
+											echo $mission_row['content'];
+										?>
+								<hr>
+		
                                 </div>
                             </div>
                         </div>
